@@ -1,1 +1,5 @@
 @mixin boxshadow {box-shadow: 2px 2px 5px rgba(116, 116, 116, 0.397);}
+
+@mixin gradient ($deg:355deg){
+    background: linear-gradient($deg, $violet 0%, $rose 100%);
+    }

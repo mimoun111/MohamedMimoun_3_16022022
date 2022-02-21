@@ -4,7 +4,14 @@
 @import "./layouts/footer";
 @import "./utils/variable";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
+.loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255, 0, 0, 0);
+    z-index: 10000;
 
+}
 .location{
     padding: 10px 0 10px 0;
     @include flexcenter;
@@ -19,14 +26,24 @@
 .reservation{
     display: block;
     background-color: rgba(233, 231, 231, 0.342);
-    height: 300px;
+    height: 350px;
     width: 100%;
     text-align: center;
+    @include flexcolumn;
+    gap: 40px;
+    padding: 0 20px 0 20px;
 
         h2{
             
-            font-size: 22px;
+            font-size: 26px;
             font-weight: 700;
 
         }
+}
+.exploration{
+    color: $blanc;
+    padding: 20px;
+    border-radius: 50px;
+    @include gradient(355deg);
+    @include boxshadow;
 }
