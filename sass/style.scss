@@ -1,0 +1,32 @@
+@import "./utils/reset";
+@import "./base/general";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./utils/variable";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
+
+.location{
+    padding: 10px 0 10px 0;
+    @include flexcenter;
+    background-color: $gris;
+    font-weight: 700;
+
+    &__logo{
+        padding-right:10px;
+    }
+}
+
+.reservation{
+    display: block;
+    background-color: rgba(233, 231, 231, 0.342);
+    height: 300px;
+    width: 100%;
+    text-align: center;
+
+        h2{
+            
+            font-size: 22px;
+            font-weight: 700;
+
+        }
+}
