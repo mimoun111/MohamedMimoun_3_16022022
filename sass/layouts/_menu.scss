@@ -1,0 +1,26 @@
+.backgroundimg{
+    
+}
+main{
+    z-index: 1000;
+    position: relative;
+    top: -100px;
+    padding: 5%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: aliceblue;
+}
+.headmain{
+    @include flexbetween;
+        &__titre{
+            font-size: 30px;
+            font-family: 'Shrikhand', cursive;
+        }
+}
+h5{
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(3, 136, 63);
+    width: 50px;
+}

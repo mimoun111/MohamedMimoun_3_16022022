@@ -1,0 +1,27 @@
+.footer{
+    background-color: #424242;
+    display:flex ;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    &__titre{
+        color: $blanc;
+        font-family: 'Shrikhand', cursive;
+        font-size: 30px;
+    }
+    &__element{
+        margin: 10px 0;
+    }
+    &__link{
+        color: #fff;
+    }
+    &__link:hover{
+        text-decoration: underline;
+    }
+    &__icon{
+        width: 20px;
+        margin-right: 15px;
+    }
+}
+    
+

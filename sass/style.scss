@@ -3,17 +3,51 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./utils/variable";
+@import "./base/effet";
+@import "./utils/flex";
+@import "./components/coeur";
+@import "./layouts/menu";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
-.loader{
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    background-color: rgba(255, 0, 0, 0);
-    z-index: 10000;
 
+.loader{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #5858588e;
+    position: fixed;
+    z-index: 1;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loader 1s;
+    animation-fill-mode: both;
+    &__circle{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin-right: 50px;
+        display: inline-block;
+        animation: rebound 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        &--1{
+            background-color: $violet;
+            animation-delay: 0.1s;
+        }
+        &--2{
+            background-color: $rose;
+            animation-delay: 0.2s;
+        }
+        &--3{
+            background-color: $bleu;
+            animation-delay: 0.4s;
+        }
+    }
 }
 .location{
-    padding: 10px 0 10px 0;
+    padding: 20px 0 20px 0;
     @include flexcenter;
     background-color: $gris;
     font-weight: 700;
@@ -26,19 +60,12 @@
 .reservation{
     display: block;
     background-color: rgba(233, 231, 231, 0.342);
-    height: 350px;
+    height: 300px;
     width: 100%;
     text-align: center;
     @include flexcolumn;
-    gap: 40px;
-    padding: 0 20px 0 20px;
-
-        h2{
-            
-            font-size: 26px;
-            font-weight: 700;
-
-        }
+    gap: 30px;
+    padding: 0 30px 0 30px;
 }
 .exploration{
     color: $blanc;
@@ -47,3 +74,111 @@
     @include gradient(355deg);
     @include boxshadow;
 }
+.navigation{
+    margin: 30px;
+}
+.fonctionnement{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: compteListe;
+        &__button{
+            width: 100%;
+            padding: 24px;
+            margin: 16px 0 16px 12px;
+            @include boxshadow;
+            border-radius: 20px;
+            color: rgba(5, 5, 5, 0.692);
+            background-color: #f6f6f6;
+            display: flex;
+            position: relative;
+                &::before{
+                    counter-increment: compteListe 1;
+                    content: counter(compteListe) " ";
+                    background: #9356dc;
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    position: absolute;
+                    left: -0.75rem;
+                }
+            }
+}
+.fa-mobile-screen-button:before, .fa-bars:before, .fa-store:before{
+    padding-right: 10px;
+}
+.fonctionnement{
+    @media screen and (min-width:980px) {
+    display: flex;
+        &__button{
+            min-width: 270px;
+            margin: 20px;
+        }
+    }
+}
+.restaurant{
+    background-color: $gris;
+    padding: 30px;
+}
+.cartes{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.restaurants{
+background-color: #c0c0c03f;
+padding: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 15px;
+}
+.carte{
+    background-color: #fff;
+    border-radius: 15px;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+        &__img{
+            height: 192px;
+            width: 100%;
+            border: 0 solid transparent;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+        }
+        &__new{
+            background-color: #99e2d0;
+            color: #1b6150;
+            padding: 8px;
+            border-radius: 2px;
+            position: absolute;
+            top: 16px;
+            right: 12px;
+        }
+        &__footer{
+            padding: 16px;
+            position: relative;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        &__titre{
+            margin: 0 0 4px;
+            display: block;
+            font-size: 18px;
+            margin-block-start: 16px;
+            margin-block-end: 16px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: 700;
+        }
+}      
+
+

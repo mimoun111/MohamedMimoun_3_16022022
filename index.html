@@ -10,7 +10,11 @@
 </head>
 
 <body>
-    <div class="loader"></div>
+    <div class="loader loader__end">
+        <span class="loader__circle loader__circle--1"></span>
+        <span class="loader__circle loader__circle--2"></span>
+        <span class="loader__circle loader__circle--3"></span>
+    </div>
 
     <header>
         <h1>ohmyfood</h1>
@@ -28,8 +32,98 @@
             <p class="exploration__text">Explorer nos restaurants</p>
         </div>
     </section>
+    <section class="navigation">
+        <h2>Fonctionnement</h2>
+            <ol class="fonctionnement">
+                <li class="fonctionnement__button"><i class="fa-solid fa-mobile-screen-button fonctionnement__icon" aria-hidden="true"></i>
+                    <span class="fonctionnement__text">Choisissez un restaurant</span>
+                </li>
+                <li class="fonctionnement__button"><i class="fa-solid fa-bars fonctionnement__icon" aria-hidden="true"></i>
+                    <span class="fonctionnement__text">Composez votre menu</span>
+                </li>
+                <li class="fonctionnement__button"><i class="fa-solid fa-store fonctionnement__icon" aria-hidden="true"></i>
+                    <span class="fonctionnement__text">Dégustez au restaurant</span>
+                </li>
+            </ol>
+    </section>
 
+    <section class="restaurants">
+        <h2 class="restaurants__titre">Restaurants</h2>
+        <a href="./menu/lapalettedugout.html" class="carte">
+            <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" class="carte__img">
+            <p class="carte__new">Nouveau<p>
 
+            <div class="carte__footer">
+                <div class="carte__text">
+                    <h3 class="carte__titre">La Palette du goût</h3>
+                    <p>Ménilmontant</p>
+                </div>
+                <div class="carte__coeur">
+                    <i class="fa-2x fa-regular fa-heart  carte__coeur__icon"></i>
+                    <i class="fa-2x fa-solid fa-heart  carte__coeur__icon__bg"></i>
+                </div>
+            </div>
+        </a>
+        <a href="./menu/Lanoteenchante.html" class="carte">
+            <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" class="carte__img">
+            <span class="carte__new">Nouveau</span>
+
+            <div class="carte__footer">
+                <div class="carte__text">
+                    <h3 class="carte__titre">La note enchantée</h3>
+                    <p>Charonne</p>
+                </div>
+                <div class="carte__coeur">
+                    <i class="fa-2x fa-regular fa-heart  carte__coeur__icon"></i>
+                    <i class="fa-2x fa-solid fa-heart  carte__coeur__icon__bg"></i>
+                </div>
+            </div>
+        </a>
+
+        <a href="./menu/alafrancaise.html" class="carte">
+            <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" class="carte__img">
+
+            <div class="carte__footer">
+                <div class="carte__text">
+                    <h3 class="carte__titre">A la française</h3>
+                    <p>Cité Rouge</p>
+                </div>
+                <div class="carte__coeur">
+                    <i class="fa-2x fa-regular fa-heart  carte__coeur__icon"></i>
+                    <i class="fa-2x fa-solid fa-heart  carte__coeur__icon__bg"></i>
+                </div>
+            </div>
+        </a>
+
+        <a href="./menu/ledelicedessens.html" class="carte">
+            <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" class="carte__img">
+
+            <div class="carte__footer">
+                <div class="carte__text">
+                    <h3 class="carte__titre">Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                </div>
+                <div class="carte__coeur">
+                    <i class="fa-2x fa-regular fa-heart  carte__coeur__icon"></i>
+                    <i class="fa-2x fa-solid fa-heart  carte__coeur__icon__bg"></i>
+                </div>
+            </div>
+        </a>
+    </section>
+    <footer class="footer">
+        <h4 class="footer__titre">ohmyfood</h1>
+        <ul class="footer__list">
+            
+            <li class="footer__element"><a href="#" class="footer__link"><i class="fa-solid fa-utensils footer__icon"></i>Proposer un restaurant</a></li>
+
+            <li class="footer__element"><a href="#" class="footer__link"><i class="fa-solid fa-handshake footer__icon"></i>Devenir partenaire</a></li>
+
+            <li class="footer__element"><a href="#" class="footer__link">Mention légales</a></li>
+
+            <li class="footer__element"><a href="#" class="footer__link">Contact</a></li>
+        </ul>
+
+    </footer>
 
 </body>
 </html>

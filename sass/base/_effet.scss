@@ -3,3 +3,40 @@
 @mixin gradient ($deg:355deg){
     background: linear-gradient($deg, $violet 0%, $rose 100%);
     }
+@mixin colorgradient{
+    background: -webkit-linear-gradient($violet, $rose);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes loader{
+    0%{
+        background-color: rgba(196,195,192,1);
+    }
+    25%{
+        background-color:rgba(196,195,192,1);;
+    }
+    50%{
+        background-color:rgba(196,195,192,1);
+    }
+    80%{
+        background-color:rgba(196,195,192,0.5);
+    }
+    100%{
+        background-color:rgba(196,195,192,0.5);
+        visibility: hidden;
+    }
+}
+@keyframes rebound{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(30px);
+    }
+    75%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
