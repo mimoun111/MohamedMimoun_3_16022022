@@ -1,5 +1,10 @@
-.carte__coeur__icon{
-    position: absolute;
-    top: 36px;
-}
+.heart{
+    font-size: 20px;
+    color: grey;
+    &:hover{
+        animation: fill 1s ease-out;
+        @include colorgradient;
+        font-weight: bold;
+    }
 
+}

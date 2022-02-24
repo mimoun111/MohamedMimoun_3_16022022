@@ -1,5 +1,7 @@
 .backgroundimg{
-    
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
 }
 main{
     z-index: 1000;
@@ -10,17 +12,89 @@ main{
     border-top-right-radius: 50px;
     background-color: aliceblue;
 }
-.headmain{
-    @include flexbetween;
-        &__titre{
-            font-size: 30px;
-            font-family: 'Shrikhand', cursive;
+.pr_main{
+    margin-top: -30px;
+    position: relative;
+    border-radius: 30px 30px 0 0;
+    background-color: #f6f6f6;
+    padding: 35px 15px 80px 15px;
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 45px;
+        &__title{
+            font-family: 'Shrikhand', sans-serif;
         }
+    }
 }
-h5{
-    padding-bottom: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid rgb(3, 136, 63);
-    width: 50px;
+
+.dishes{
+    padding-bottom: 40px;
+    &__header{
+        margin-bottom: 25px;
+        ::after{
+            content: "";
+            display: block;
+            margin-top: 5px;
+            width: 40px;
+            height: 3px;
+            background-color: $bleu;
+            animation: progress 2s;
+            animation-fill-mode: both;
+            transform: scale(0);
+        }
+    }
+    &__card{
+        height: 70px;
+        width: 100%;
+        padding-left: 10px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        @include boxshadow;
+        animation: appear 0.5s;
+        animation-timing-function: cubic-bezier(.57,-0.3,.36,1.2);
+        transform: scale(0);
+        animation-fill-mode: both;
+        &__txt{
+            width: 90%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &--over{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &__price{
+            margin-left: 10px;
+        }
+        &__check{
+            height: 70px;
+            width: 60px;
+            opacity: 0;
+            background-color: $bleu;
+            margin-left: 25px;
+            margin-right: -70px;
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.7s ease-in-out;
+        }
+        &:hover :nth-child(3) {
+            opacity: 1;
+            margin-right: 0px;
+        }
+        &:hover .check_icons{
+            opacity: 1;
+            transform: rotate(-360deg);
+        }
+    }
+    
 }

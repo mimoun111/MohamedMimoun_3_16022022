@@ -232,9 +232,22 @@ h1 {
     transform: translateY(0);
   }
 }
-.carte__coeur__icon {
-  position: absolute;
-  top: 36px;
+.heart {
+  font-size: 20px;
+  color: grey;
+}
+.heart:hover {
+  animation: fill 1s ease-out;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.backgroundimg {
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
 
 main {
@@ -247,22 +260,90 @@ main {
   background-color: aliceblue;
 }
 
-.headmain {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.pr_main {
+  margin-top: -30px;
+  position: relative;
+  border-radius: 30px 30px 0 0;
+  background-color: #f6f6f6;
+  padding: 35px 15px 80px 15px;
 }
-.headmain__titre {
-  font-size: 30px;
-  font-family: "Shrikhand", cursive;
+.pr_main__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+.pr_main__header__title {
+  font-family: "Shrikhand", sans-serif;
 }
 
-h5 {
-  padding-bottom: 5px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #03883f;
-  width: 50px;
+.dishes {
+  padding-bottom: 40px;
+}
+.dishes__header {
+  margin-bottom: 25px;
+}
+.dishes__header ::after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+  animation: progress 2s;
+  animation-fill-mode: both;
+  transform: scale(0);
+}
+.dishes__card {
+  height: 70px;
+  width: 100%;
+  padding-left: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(116, 116, 116, 0.397);
+  animation: appear 0.5s;
+  animation-timing-function: cubic-bezier(0.57, -0.3, 0.36, 1.2);
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+.dishes__card__txt {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dishes__card__txt--over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dishes__card__price {
+  margin-left: 10px;
+}
+.dishes__card__check {
+  height: 70px;
+  width: 60px;
+  opacity: 0;
+  background-color: #99e2d0;
+  margin-left: 25px;
+  margin-right: -70px;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s ease-in-out;
+}
+.dishes__card:hover :nth-child(3) {
+  opacity: 1;
+  margin-right: 0px;
+}
+.dishes__card:hover .check_icons {
+  opacity: 1;
+  transform: rotate(-360deg);
 }
 
 .loader {
@@ -336,6 +417,9 @@ h5 {
   background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
   box-shadow: 2px 2px 5px rgba(116, 116, 116, 0.397);
 }
+.exploration:hover {
+  cursor: pointer;
+}
 
 .navigation {
   margin: 30px;
@@ -358,6 +442,9 @@ h5 {
   background-color: #f6f6f6;
   display: flex;
   position: relative;
+}
+.fonctionnement__button:hover {
+  cursor: pointer;
 }
 .fonctionnement__button::before {
   counter-increment: compteListe 1;

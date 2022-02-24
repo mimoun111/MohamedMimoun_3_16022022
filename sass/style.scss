@@ -73,6 +73,9 @@
     border-radius: 50px;
     @include gradient(355deg);
     @include boxshadow;
+        &:hover{
+            cursor: pointer;
+        }
 }
 .navigation{
     margin: 30px;
@@ -93,6 +96,9 @@
             background-color: #f6f6f6;
             display: flex;
             position: relative;
+                &:hover{
+                    cursor: pointer;
+                }
                 &::before{
                     counter-increment: compteListe 1;
                     content: counter(compteListe) " ";
