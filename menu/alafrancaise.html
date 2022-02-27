@@ -9,27 +9,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!----------------------- HEADER -------------------->
-    <header>
-        <a href="../index.html"><i class="fa-2x fa-solid fa-arrow-left back"></i></a><h1>ohmyfood</h1>
+    <!--============ HEADER ============-->
+    <header class="pr_header" id="top_page">
+            <div>
+                <a href="../index.html"><i class="fa-2x fas fa-arrow-left pr_header__back"></i></a>
+            </div>
+        <div class="pr_header__logo">
+            <h1>ohmyfood</h1>
+        </div>
     </header>
-    <div class="backgroundimg">
-        <img src="../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+
+    <div>
+        <img class="pr_img" src="../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" />
     </div>
+
+    <!--============ PR_MAIN ============-->   
     <main class="pr_main">
         <header class="pr_main__header">
             <h2 class="pr_main__header__title">À la française</h2>
             <div>
-                <i class="heart far fa-heart"></i>
+                <i class="fa-2x heart far fa-heart"></i>
             </div>
         </header>
 
-    <!------------------ ENTREES -------------------->
-
+    <!--============ ENTREES ============-->
         <div class="container">
             <section class="dishes" id="entrees">
                 <header class="dishes__header">
-                    <h4>ENTRÉES</h4>
+                    <h3>ENTRÉES</h3>
                 </header>
 
                 <div class="dishes__card delay1">
@@ -72,8 +79,7 @@
                 </div>
             </section>
 
-    <!-----------------PLATS ------------------>
-
+    <!--============ PLATS ============-->
             <section class="dishes" id="plats">
                 <header class="dishes__header">
                     <h3>PLATS</h3>
@@ -119,8 +125,7 @@
                 </div>
             </section>
 
-    <!----------------------- DESSERT-------------------->
-
+    <!--============ DESSERT ============-->
             <section class="dishes" id="dessert">
                 <header class="dishes__header">
                     <h3>DESSERTS</h3>
@@ -169,10 +174,11 @@
 
         <a class="btn" href="">Commander</a>
     </main>
+
 <!----------------------- FOOTER -------------------->
 
     <footer class="footer">
-        <h4 class="footer__titre">ohmyfood</h1>
+        <h5 class="footer__titre">ohmyfood</h1>
         <ul class="footer__list">
             
             <li class="footer__element"><a href="#" class="footer__link"><i class="fa-solid fa-utensils footer__icon"></i>Proposer un restaurant</a></li>

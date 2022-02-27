@@ -8,6 +8,21 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@mixin shadow {
+    box-shadow: 2px 2px 10px $shadow-color;
+}
+
+// Ombre plus sombre
+@mixin darker-shadow{
+    box-shadow: 2px 2px 20px black;
+}
+
+// Couleur gradient pour boutons et coeurs
+@mixin gradient-color {
+    background-image: linear-gradient($secondary-color, $primary-color);
+}
+
 @keyframes loader{
     0%{
         background-color: rgba(196,195,192,1);
@@ -38,5 +53,92 @@
     }
     100%{
         transform: translateY(0);
+    }
+}
+
+// Animation d'apparition des "cards" pour les menus
+@keyframes appear{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+// delais d'apparition des "cards" pour les menus
+.delay1{
+    animation-delay: 0.1s;
+}
+
+.delay2{
+    animation-delay: 0.3s;
+}
+
+.delay3{
+    animation-delay: 0.6s;
+}
+
+.delay4{
+    animation-delay: 0.9s;
+}
+
+
+
+// Animation pour le soulignage des intitulés "entrées, plats, desserts"
+@keyframes progress{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+// Animation pour les circles du loader
+@keyframes rebound{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(30px);
+    }
+    75%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+//  Animation de disparition du loader
+@keyframes loader{
+    0%{
+        background-color: rgba(196,195,192,1);
+    }
+    25%{
+        background-color:rgba(196,195,192,1);;
+    }
+    50%{
+        background-color:rgba(196,195,192,1);
+    }
+    80%{
+        background-color:rgba(196,195,192,0.5);
+    }
+    100%{
+        background-color:rgba(196,195,192,0.5);
+        visibility: hidden;
+    }
+}
+
+
+// Animation pour le remplissage du coeur "heart"
+@keyframes fill{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
     }
 }
