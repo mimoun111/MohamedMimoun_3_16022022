@@ -35,15 +35,15 @@
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         &--1{
-            background-color: $violet;
+            background-color: $primary-color;
             animation-delay: 0.1s;
         }
         &--2{
-            background-color: $rose;
+            background-color: $secondary-color;
             animation-delay: 0.2s;
         }
         &--3{
-            background-color: $bleu;
+            background-color: $tertiary-color;
             animation-delay: 0.4s;
         }
     }
@@ -89,9 +89,6 @@ h1{
 }
 .fonctionnement{
     width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     counter-reset: compteListe;
         &__button{
             width: 100%;
@@ -137,6 +134,14 @@ h1{
 .restaurant{
     background-color: $gris;
     padding: 30px;
+}
+.grp{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    @media (min-width:980px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 }
 .cartes{
     display: grid;

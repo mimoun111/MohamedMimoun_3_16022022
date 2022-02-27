@@ -240,7 +240,7 @@ h1 {
 }
 
 .footer {
-  background-color: #424242;
+  background-color: #303030;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -375,7 +375,7 @@ h1 {
 }
 .heart:hover {
   animation: fill 1s ease-out;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -410,7 +410,7 @@ h1 {
 }
 
 .pr_header {
-  padding: 20px 25px 10px 25px;
+  padding-left: 25px;
   display: flex;
   align-items: center;
 }
@@ -449,6 +449,11 @@ h1 {
 .dishes {
   padding-bottom: 40px;
 }
+@media screen and (min-width: 1000px) {
+  .dishes {
+    width: 30%;
+  }
+}
 .dishes__header {
   margin-bottom: 25px;
 }
@@ -458,7 +463,7 @@ h1 {
   margin-top: 5px;
   width: 40px;
   height: 3px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   animation: progress 2s;
   animation-fill-mode: both;
   transform: scale(0);
@@ -497,7 +502,7 @@ h1 {
   height: 70px;
   width: 60px;
   opacity: 0;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   margin-left: 25px;
   margin-right: -70px;
   border-radius: 0 10px 10px 0;
@@ -513,6 +518,17 @@ h1 {
 .dishes__card:hover .check_icons {
   opacity: 1;
   transform: rotate(-360deg);
+}
+
+h4 {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .loader {
@@ -541,15 +557,15 @@ h1 {
   animation-iteration-count: infinite;
 }
 .loader__circle--1 {
-  background-color: #9356dc;
+  background-color: #9356DC;
   animation-delay: 0.1s;
 }
 .loader__circle--2 {
-  background-color: #ff79da;
+  background-color: #FF79DA;
   animation-delay: 0.2s;
 }
 .loader__circle--3 {
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   animation-delay: 0.4s;
 }
 
@@ -603,9 +619,6 @@ h1 {
 
 .fonctionnement {
   width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
   counter-reset: compteListe;
 }
 .fonctionnement__button {
@@ -654,6 +667,17 @@ h1 {
 .restaurant {
   background-color: #dfdfdf;
   padding: 30px;
+}
+
+.grp {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+@media (min-width: 980px) {
+  .grp {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .cartes {

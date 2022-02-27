@@ -1,6 +1,6 @@
 
 .pr_header{
-    padding: 20px 25px 10px 25px;
+    padding-left:25px;
     display: flex;
     align-items: center;
     &__logo{
@@ -39,6 +39,10 @@
 
 .dishes{
     padding-bottom: 40px;
+    @media screen and (min-width:1000px) {
+        
+        width: 30%;
+    }
     &__header{
         margin-bottom: 25px;
         ::after{
@@ -47,7 +51,7 @@
             margin-top: 5px;
             width: 40px;
             height: 3px;
-            background-color: $bleu;
+            background-color: $tertiary-color;
             animation: progress 2s;
             animation-fill-mode: both;
             transform: scale(0);
@@ -86,7 +90,7 @@
             height: 70px;
             width: 60px;
             opacity: 0;
-            background-color: $bleu;
+            background-color: $tertiary-color;
             margin-left: 25px;
             margin-right: -70px;
             border-radius: 0 10px 10px 0;
@@ -105,4 +109,13 @@
         }
     }
     
+}
+h4{
+    font-weight: bold;
+}
+.container{
+    @media screen and (min-width:1000px) {
+        display: flex;
+        justify-content: space-around; 
+    }
 }

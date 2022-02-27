@@ -1,10 +1,10 @@
 @mixin boxshadow {box-shadow: 2px 2px 5px rgba(116, 116, 116, 0.397);}
 
 @mixin gradient ($deg:355deg){
-    background: linear-gradient($deg, $violet 0%, $rose 100%);
+    background: linear-gradient($deg, $primary-color 0%, $secondary-color 100%);
     }
 @mixin colorgradient{
-    background: -webkit-linear-gradient($violet, $rose);
+    background: -webkit-linear-gradient($primary-color, $secondary-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
