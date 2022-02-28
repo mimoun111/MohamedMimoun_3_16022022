@@ -72,6 +72,7 @@
         animation-timing-function: cubic-bezier(.57,-0.3,.36,1.2);
         transform: scale(0);
         animation-fill-mode: both;
+        cursor: pointer;
         &__txt{
             width: 90%;
             white-space: nowrap;

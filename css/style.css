@@ -379,6 +379,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .check_icons {
@@ -483,6 +484,7 @@ h1 {
   animation-timing-function: cubic-bezier(0.57, -0.3, 0.36, 1.2);
   transform: scale(0);
   animation-fill-mode: both;
+  cursor: pointer;
 }
 .dishes__card__txt {
   width: 90%;
@@ -672,7 +674,6 @@ h1 {
 .grp {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
 }
 @media (min-width: 980px) {
   .grp {
@@ -693,7 +694,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
 }
 
 .carte {
@@ -703,6 +703,7 @@ h1 {
   text-decoration: none;
   color: inherit;
   display: block;
+  margin: 30px 30px 0 30px;
 }
 .carte__img {
   height: 192px;

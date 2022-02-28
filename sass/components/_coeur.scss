@@ -5,6 +5,7 @@
         animation: fill 1s ease-out;
         @include colorgradient;
         font-weight: bold;
+        cursor: pointer;
     }
 
 }
