@@ -9,51 +9,18 @@
     -webkit-text-fill-color: transparent;
 }
 
-@mixin shadow {
-    box-shadow: 2px 2px 10px $shadow-color;
-}
 
-// Ombre plus sombre
+// Ombres
 @mixin darker-shadow{
     box-shadow: 2px 2px 20px black;
+}
+@mixin shadow {
+    box-shadow: 2px 2px 10px $shadow-color;
 }
 
 // Couleur gradient pour boutons et coeurs
 @mixin gradient-color {
     background-image: linear-gradient($secondary-color, $primary-color);
-}
-
-@keyframes loader{
-    0%{
-        background-color: rgba(196,195,192,1);
-    }
-    25%{
-        background-color:rgba(196,195,192,1);;
-    }
-    50%{
-        background-color:rgba(196,195,192,1);
-    }
-    80%{
-        background-color:rgba(196,195,192,0.5);
-    }
-    100%{
-        background-color:rgba(196,195,192,0.5);
-        visibility: hidden;
-    }
-}
-@keyframes rebound{
-    0%{
-        transform: translateY(0);
-    }
-    25%{
-        transform: translateY(30px);
-    }
-    75%{
-        transform: translateY(-30px);
-    }
-    100%{
-        transform: translateY(0);
-    }
 }
 
 // Animation d'apparition des "cards" pour les menus
@@ -95,7 +62,7 @@
     }
 }
 
-// Animation pour les circles du loader
+// Animation pour les cercles du loader
 @keyframes rebound{
     0%{
         transform: translateY(0);

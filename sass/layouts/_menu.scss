@@ -40,7 +40,6 @@
 .dishes{
     padding-bottom: 40px;
     @media screen and (min-width:1000px) {
-        
         width: 30%;
     }
     &__header{
@@ -111,6 +110,7 @@
     }
     
 }
+
 h4{
     font-weight: bold;
 }

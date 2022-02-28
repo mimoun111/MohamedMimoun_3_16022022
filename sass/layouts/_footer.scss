@@ -4,6 +4,15 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    height: 300px;
+    
+    &__list{
+        @media (min-width:1000px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
     &__titre{
         color: $blanc;
         font-family: 'Shrikhand', cursive;

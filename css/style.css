@@ -59,38 +59,6 @@ a {
   text-decoration: none;
 }
 
-@keyframes loader {
-  0% {
-    background-color: #c4c3c0;
-  }
-  25% {
-    background-color: #c4c3c0;
-  }
-  50% {
-    background-color: #c4c3c0;
-  }
-  80% {
-    background-color: rgba(196, 195, 192, 0.5);
-  }
-  100% {
-    background-color: rgba(196, 195, 192, 0.5);
-    visibility: hidden;
-  }
-}
-@keyframes rebound {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(30px);
-  }
-  75% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @keyframes appear {
   0% {
     transform: scale(0);
@@ -245,6 +213,14 @@ h1 {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  height: 300px;
+}
+@media (min-width: 1000px) {
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .footer__titre {
   color: #fff;
@@ -265,38 +241,6 @@ h1 {
   margin-right: 15px;
 }
 
-@keyframes loader {
-  0% {
-    background-color: #c4c3c0;
-  }
-  25% {
-    background-color: #c4c3c0;
-  }
-  50% {
-    background-color: #c4c3c0;
-  }
-  80% {
-    background-color: rgba(196, 195, 192, 0.5);
-  }
-  100% {
-    background-color: rgba(196, 195, 192, 0.5);
-    visibility: hidden;
-  }
-}
-@keyframes rebound {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(30px);
-  }
-  75% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @keyframes appear {
   0% {
     transform: scale(0);
