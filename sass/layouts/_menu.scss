@@ -67,7 +67,7 @@
         margin-bottom: 15px;
         overflow: hidden;
         @include boxshadow;
-        animation: appear 0.5s;
+        animation: appear 1s;
         animation-timing-function: cubic-bezier(.57,-0.3,.36,1.2);
         transform: scale(0);
         animation-fill-mode: both;
